@@ -55,7 +55,8 @@ REQUIRED_COLS = [
 ]
 
 BRAND_NAME = "CAI Business Intelligence"
-LOGO_PATH = "assets/logo_cai.png"
+LOGO_PATH = "activos/logo_cai.png"
+
 
 
 # ---------------------------
@@ -591,3 +592,4 @@ with left:
 if show_raw:
     st.subheader("Datos (filtrados)")
     st.dataframe(filtered, use_container_width=True)
+
