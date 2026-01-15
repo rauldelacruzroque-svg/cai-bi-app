@@ -20,7 +20,25 @@ from reportlab.lib.units import inch
 # Page config
 # ---------------------------
 st.set_page_config(page_title="CAI Business Intelligence", layout="wide")
-st.title("CAI Business Intelligence")
+st.markdown("""
+<style>
+.block-container {
+    padding-top: 0.8rem;
+}
+h1 {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+h3 {
+    margin-top: 0.1rem;
+    margin-bottom: 0.6rem;
+}
+</style>
+
+<h1>CAI Business Intelligence</h1>
+<h3>Dashboard Interactivo</h3>
+""", unsafe_allow_html=True)
+
 
 # Sticky right panel + small styling
 st.markdown(
@@ -592,5 +610,6 @@ with left:
 if show_raw:
     st.subheader("Datos (filtrados)")
     st.dataframe(filtered, use_container_width=True)
+
 
 
