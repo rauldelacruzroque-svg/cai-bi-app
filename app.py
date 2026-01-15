@@ -22,22 +22,38 @@ from reportlab.lib.units import inch
 st.set_page_config(page_title="CAI Business Intelligence", layout="wide")
 st.markdown("""
 <style>
+/* Sube todo el contenido */
 .block-container {
-    padding-top: 0.8rem;
+    padding-top: 0.2rem !important;
+    padding-bottom: 1rem !important;
 }
+
+/* Arregla el recorte del título grande */
 h1 {
-    margin-top: 0.2rem;
-    margin-bottom: 0.2rem;
+    margin-top: 0rem !important;
+    margin-bottom: 0.2rem !important;
+    line-height: 1.15 !important;
+    padding-top: 0.1rem !important;
+    overflow: visible !important;
 }
+
+/* Subtítulo */
 h3 {
-    margin-top: 0.1rem;
-    margin-bottom: 0.6rem;
+    margin-top: 0rem !important;
+    margin-bottom: 0.8rem !important;
+    line-height: 1.2 !important;
+}
+
+/* Quita espacio extra que a veces mete Streamlit arriba */
+header[data-testid="stHeader"] {
+    height: 0rem !important;
 }
 </style>
 
 <h1>CAI Business Intelligence</h1>
 <h3>Dashboard Interactivo</h3>
 """, unsafe_allow_html=True)
+
 
 
 # Sticky right panel + small styling
@@ -610,6 +626,7 @@ with left:
 if show_raw:
     st.subheader("Datos (filtrados)")
     st.dataframe(filtered, use_container_width=True)
+
 
 
 
