@@ -22,27 +22,8 @@ from reportlab.lib.units import inch
 st.set_page_config(page_title="CAI Business Intelligence", layout="wide")
 st.markdown("""
 <style>
-/* Deja espacio arriba para que NO se corte el título */
-div[data-testid="stAppViewContainer"] > .main {
-    padding-top: 2.2rem;
-}
-
-/* Opcional: aprieta un poquito el título sin recortarlo */
-h1 {
-    margin-top: 0rem !important;
-    padding-top: 0rem !important;
-    line-height: 1.15 !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
-st.title("CAI Business Intelligence")
-st.subheader("Dashboard Interactivo")
-
-st.markdown("""
-<style>
 .block-container {
-    padding-top: 0.3rem !important;
+    padding-top: 2.2rem !important;
     padding-bottom: 1rem !important;
 }
 
@@ -61,6 +42,7 @@ h4 {
 <h2>CAI Business Intelligence</h2>
 <h4>Dashboard Interactivo</h4>
 """, unsafe_allow_html=True)
+
 
 
 # ---------------------------
@@ -616,6 +598,7 @@ with left:
 if show_raw:
     st.subheader("Datos (filtrados)")
     st.dataframe(filtered, use_container_width=True)
+
 
 
 
