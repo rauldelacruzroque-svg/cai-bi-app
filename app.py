@@ -22,56 +22,27 @@ from reportlab.lib.units import inch
 st.set_page_config(page_title="CAI Business Intelligence", layout="wide")
 st.markdown("""
 <style>
-/* Sube todo el contenido */
 .block-container {
-    padding-top: 0.2rem !important;
+    padding-top: 0.3rem !important;
     padding-bottom: 1rem !important;
 }
 
-/* Arregla el recorte del título grande */
-h1 {
+h2 {
     margin-top: 0rem !important;
     margin-bottom: 0.2rem !important;
-    line-height: 1.15 !important;
-    padding-top: 0.1rem !important;
-    overflow: visible !important;
-}
-
-/* Subtítulo */
-h3 {
-    margin-top: 0rem !important;
-    margin-bottom: 0.8rem !important;
     line-height: 1.2 !important;
 }
 
-/* Quita espacio extra que a veces mete Streamlit arriba */
-header[data-testid="stHeader"] {
-    height: 0rem !important;
+h4 {
+    margin-top: 0.2rem !important;
+    margin-bottom: 1rem !important;
 }
 </style>
 
-<h1>CAI Business Intelligence</h1>
-<h3>Dashboard Interactivo</h3>
+<h2>CAI Business Intelligence</h2>
+<h4>Dashboard Interactivo</h4>
 """, unsafe_allow_html=True)
 
-
-
-# Sticky right panel + small styling
-st.markdown(
-    """
-<style>
-/* Panel derecho sticky */
-div[data-testid="column"]:nth-of-type(2) {
-  position: sticky;
-  top: 0.75rem;
-  align-self: flex-start;
-  height: fit-content;
-}
-.block-container { padding-top: 1rem; }
-</style>
-""",
-    unsafe_allow_html=True,
-)
 
 # ---------------------------
 # Template config (YOUR schema)
@@ -626,6 +597,7 @@ with left:
 if show_raw:
     st.subheader("Datos (filtrados)")
     st.dataframe(filtered, use_container_width=True)
+
 
 
 
